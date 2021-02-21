@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Execute test script
-        run: curl -s https://raw.githubusercontent.com/rrousselGit/ci/master/scripts/ci.sh | bash -s nnbd
+        run: unset CI && curl -s https://raw.githubusercontent.com/rrousselGit/ci/master/scripts/ci.sh | bash -s nnbd
 
       - name: Upload test results
         if: success() || failure()
