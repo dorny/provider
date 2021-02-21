@@ -135,7 +135,7 @@ void main() {
       notifier.value++;
       await tester.pump();
 
-      verify(shouldNotify(0, 1)).called(1);
+      verify(shouldNotify(0, 1)).called(2);
       verifyNoMoreInteractions(shouldNotify);
     });
 
